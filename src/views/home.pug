@@ -1,0 +1,14 @@
+extends base
+
+block content
+  h1 Movies!
+  form(method="get" action="/filter")
+    input(name="selectedYear" placeholder="Filter by year")
+    input(name="selectedRating" placeholder="Filter by rating")
+    input(value="Search" type="submit")
+  ul
+    each movie in moviesList
+      li
+        a(href=`/${movie.id}`)=movie.title_english
+
+    

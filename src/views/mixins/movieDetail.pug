@@ -1,0 +1,20 @@
+mixin movieDetail(movie)
+
+  h1=movie.title
+  main
+    img(src=movie.large_cover_image)
+    h3 rating 
+    p #{movie.rating}
+    h3 year
+    p #{movie.year}
+    h3 summary:
+    p=movie.summary
+    h3 description:
+    p=movie.description_full
+    h3 synopsis:
+    p=movie.synopsis
+    h3 genres:
+    ul
+      each genre in movie.genres
+        li=genre
+
